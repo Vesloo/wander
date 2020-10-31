@@ -1,0 +1,10 @@
+RewriteEngine On
+
+RewriteRule ^index$ index.php
+RewriteRule ^crush$ vues/crush.php
+RewriteRule ^profile$ vues/profile.php
+RewriteRule ^register$ vues/register.php
+RewriteRule ^discover$ vues/discover.php
+RewriteRule ^connection$ vues/connection.php
+RewriteRule ^deconnection$ vues/deconnection.php
+RewriteRule ^profileFriend$ vues/profileFriend.php

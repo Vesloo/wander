@@ -1,0 +1,75 @@
+.formulaire {
+    margin: auto;
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+}
+
+.formulaire {
+    opacity:0;
+    -moz-animation: anim 1s linear forwards;
+    -webkit-animation: anim 1s linear forwards;
+    -o-animation: anim 1s linear forwards;
+    -ms-animation: anim 1s linear forwards;
+    animation: anim 1s linear forwards;
+}
+@-moz-keyframes anim {
+   0%  {opacity:0;}
+   100% {opacity:1;}
+}
+@-webkit-keyframes anim {
+   0%  {opacity:0;}
+   100% {opacity:1;}
+}
+@-o-keyframes anim {
+   0%  {opacity:0;}
+   100% {opacity:1;}
+}
+@-ms-keyframes anim {
+   0%  {opacity:0;}
+   100% {opacity:1;}
+}
+@keyframes anim {
+   0%  {opacity:0;}
+   100% {opacity:1;}
+}
+
+.formulaire-text {
+   text-align: center;
+   font-size: 25px;
+}
+
+#progress-bar {
+   height: 20px;
+   width: 200px;
+   background-color: white;
+   margin-top: 10px;
+}
+
+#progress-bar div {
+   display: flex;
+   height: 20px;
+   width:100px;
+   background-color: gray;
+   margin-bottom: 20px;
+}
+
+.container-formulaire {
+   background-color: #343a40;
+}
+
+.level {
+   position:absolute;
+}
+
+@media screen and (min-width:400px)
+{
+   .formulaire {
+      width:400px;
+   }
+}
+
+.unique-profil {
+   border: solid 1px white;
+   height: 300px;
+}

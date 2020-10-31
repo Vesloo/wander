@@ -1,0 +1,94 @@
+@media screen and (min-width: 1250px)
+{
+    .discover {
+        grid-template-columns: repeat(5, 250px);
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width:1250px)
+{
+    .discover {
+        grid-template-columns: repeat(4, 250px);
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width:1000px)
+{
+    .discover {
+        grid-template-columns: repeat(3, 250px);
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width:750px)
+{
+    .discover {
+        grid-template-columns: repeat(2, 250px);
+    }
+}
+
+@media screen and (min-width: 250px) and (max-width:500px)
+{
+    .discover {
+        grid-template-columns: repeat(1, 250px);
+        width:100%;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width:250px)
+{
+    .profile {
+        width:100%;
+    }
+}
+
+@media screen and (min-width: 250px)
+{
+    .profile {
+        width:250px;
+    }
+}
+
+.discover {
+    display: grid;
+    justify-content: center;
+    margin: auto;
+}
+
+.profile {
+    border:solid 1px;
+}
+
+.follow {
+    display:grid;
+    border: solid 1px white;
+    height:300px;
+    float: left;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.container-formulaire {
+    display:grid;
+    color:white;
+    justify-content: center;
+}
+
+.unique-profile {
+    height: 300px;
+}
+
+@media screen and (min-width:600px)
+{
+    .follow {
+        grid-template-columns: repeat(2, 300px);
+    }
+}
+
+@media screen and (min-width:1200px)
+{
+    .container-formulaire {
+        grid-template-columns: repeat(2, 600px);
+        justify-content: space-between;
+
+    }
+}
