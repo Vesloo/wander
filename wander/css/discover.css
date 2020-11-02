@@ -59,10 +59,10 @@
 }
 
 .follow {
+    margin-right: 10px;
     display:grid;
     border: solid 1px white;
     height:300px;
-    float: left;
     overflow-y: auto;
     overflow-x: hidden;
 }

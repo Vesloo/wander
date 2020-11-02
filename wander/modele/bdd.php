@@ -6,6 +6,6 @@ class Bdd
 
     public function __construct()
     {
-        $this->bdd = new PDO("mysql:host=localhost;dbname=mytic", "root", "", array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
+        $this->bdd = new PDO("mysql:host=localhost;dbname=wander", "root", "", array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
     }
 }

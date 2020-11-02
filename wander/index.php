@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 ?>
@@ -13,39 +14,45 @@ session_start();
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="./index">Wander</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link discover" href="discover">Discover</a>
+    <?php
+    echo "<nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
+    <a class='navbar-brand' href='./index'>Wander</a>
+    <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarTogglerDemo02' aria-controls='navbarTogglerDemo02' aria-expanded='false' aria-label='Toggle navigation'>
+        <span class='navbar-toggler-icon'></span>
+    </button>
+    
+    <div class='collapse navbar-collapse' id='navbarTogglerDemo02'>
+        <ul class='navbar-nav mr-auto mt-2 mt-lg-0'>";
+            if (!isset($_SESSION['name'])) echo "<li class='nav-item'>
+                <a class='nav-link crush' href='./register'>Register</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link crush" href="crush">Crush</a>
+                <li class='nav-item'>
+                    <a class='nav-link crush' href='./connection'>Connection</a>
+                </li>";
+            else
+                echo "<li class='nav-item'>
+                <a class='nav-link profiles' href='./profile'>Profile</a>
                 </li>
-                <?php
-                if (!isset($_SESSION['name'])) echo "<li class='nav-item'>
-                    <a class='nav-link crush' href='./register'>Register</a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class='nav-link crush' href='./connection'>Connection</a>
-                    </li>";
-                else
-                    echo "<li class='nav-item'>
-                    <a class='nav-link profile' href='./profile'>Profile</a>
-                    </li>
-                    <li class='nav-item'>
-                    <a class='nav-link crush' href='./deconnection'>Deconnection</a>
-                    </li>
-                    ";
-                ?>
-            </ul>
-        </div>
-    </nav>
+                <li class='nav-item'>
+                    <a class='nav-link discover' href='./discover'>Discover</a>
+                </li>
+                <li class='nav-item'>
+                    <a class='nav-link crush' href='./crush'>Friends</a>
+                </li>
+                <li class='nav-item'>
+                <a class='nav-link crush' href='./deconnection'>Deconnection</a>
+                </li>
+                <li class='nav-item'>
+                <div id='progress-bar'>
+                    <p class='level'>Level ".$_SESSION['level']."</p>
+                    <div></div>
+                </div>
+                </li>
+                ";
+        echo "</ul>
+                </div>
+            </nav>";
+    ?>
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

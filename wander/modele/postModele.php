@@ -3,6 +3,8 @@ require_once "bdd.php";
 
 class PostModele extends Bdd
 {
+    private $id_user;
+
     private $content;
 
     private $date;
@@ -12,16 +14,16 @@ class PostModele extends Bdd
         parent::__construct();
     }
 
-    public function post($content, $date)
+    public function post($user_id, $content, $date)
     {
-        $query = $this->bdd->prepare("INSERT INTO post (content, date) VALUES (?, ?)");
-        $query->execute();
+        $query = $this->bdd->prepare("INSERT INTO post (id_user, content, date) VALUES (?, ?, ?)");
+        $query->execute([$user_id, $content, $date]);
     }
     
-    public function selectPost($profileId)
+    public function selectPostByUser()
     {
         $select = $this->bdd->prepare("SELECT * FROM post WHERE id_profile=?");
-        $select->execute([$profileId]);
+        $select->execute([$this->profileId]);
         $tab = $select->fetchAll(PDO::FETCH_ASSOC);
 
         foreach ($tab as $values)
